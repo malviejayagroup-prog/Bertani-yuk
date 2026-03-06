@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investasi Labu Siam — Sukabumi Green Farm</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:        #080808;
+    --black-mid:    #0f0f0f;
+    --black-card:   #141414;
+    --black-light:  #1a1a1a;
+    --black-border: #272727;
+    --gold:         #c9a84c;
+    --gold-light:   #e9c46a;
+    --gold-bright:  #f5d87a;
+    --gold-shine:   #fff0a0;
+    --gold-dim:     #9a7a35;
+    --text-body:    #b89650;
+    --text-muted:   #7a6335;
+    --text-faint:   #3e3018;
+    /* Keep legacy vars so inline styles still work */
+    --green-deep:   #141414;
+    --green-mid:    #1e1e1e;
+    --green-light:  #c9a84c;
+    --cream:        #080808;
+    --warm-white:   #0f0f0f;
+    --bark:         #c9a84c;
+    --text-dark:    #e9c46a;
+    --text-mid:     #7a6335;
+  }
+
+  @keyframes goldShimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* grain texture overlay */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: 0.5;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--text-body);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--black);
+    background-image:
+      radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.04) 0%, transparent 50%);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px 20px; position: relative;
+  }
+  .hero::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 120px; background: linear-gradient(to bottom, transparent, var(--black)); z-index: 1;
+  }
+  .hero::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), var(--gold-shine), var(--gold-dim), transparent);
+    background-size: 200% auto; animation: goldShimmer 3s linear infinite;
+  }
+
+  .leaf-deco  { position: absolute; opacity: 0.04; font-size: 200px; top: -20px; right: -30px; animation: sway 6s ease-in-out infinite; filter: sepia(1) brightness(1.5); }
+  .leaf-deco2 { position: absolute; opacity: 0.03; font-size: 150px; bottom: 60px; left: -20px; animation: sway 8s ease-in-out infinite reverse; filter: sepia(1) brightness(1.5); }
+
+  @keyframes sway { 0%,100%{transform:rotate(-5deg) scale(1)} 50%{transform:rotate(5deg) scale(1.05)} }
+
+  .hero-badge {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 4px;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold-bright), var(--gold-shine), var(--gold-bright), var(--gold-dim));
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: goldShimmer 3s linear infinite;
+    border: 1px solid rgba(201,168,76,0.3); padding: 8px 20px; border-radius: 40px;
+    margin-bottom: 30px; position: relative; z-index: 2;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 7vw, 5.5rem);
+    background: linear-gradient(135deg, var(--gold-dim) 0%, var(--gold-bright) 40%, var(--gold-shine) 55%, var(--gold-bright) 70%, var(--gold-dim) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: goldShimmer 5s linear infinite;
+    text-align: center; line-height: 1.1; max-width: 800px; position: relative; z-index: 2;
+  }
+  .hero h1 em {
+    background: linear-gradient(90deg, var(--gold), var(--gold-shine), var(--gold));
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: goldShimmer 3s linear infinite; font-style: italic;
+  }
+  .hero-sub {
+    font-size: 16px; color: rgba(201,168,76,0.5); text-align: center;
+    max-width: 560px; line-height: 1.7; margin: 24px 0 40px;
+    position: relative; z-index: 2; font-weight: 300;
+  }
+  .hero-cta {
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold-light), var(--gold-bright), var(--gold-light), var(--gold-dim));
+    background-size: 300% auto; color: #050503; border: none;
+    padding: 16px 44px; font-family: 'Cinzel', serif; font-size: 13px;
+    font-weight: 700; letter-spacing: 2px; border-radius: 4px;
+    cursor: pointer; position: relative; z-index: 2; transition: all 0.3s;
+    animation: goldShimmer 3s linear infinite; text-transform: uppercase;
+  }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,168,76,0.35), 0 0 60px rgba(201,168,76,0.12); }
+
+  @keyframes fadeDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ── STATS ── */
+  .stats {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    max-width: 900px; margin: -30px auto 0; position: relative; z-index: 10;
+    background: var(--black-card); border-radius: 12px;
+    border: 1px solid rgba(201,168,76,0.18);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 40px rgba(201,168,76,0.04); overflow: hidden;
+  }
+  .stat-item {
+    flex: 1; min-width: 150px; padding: 32px 24px; text-align: center;
+    border-right: 1px solid rgba(201,168,76,0.08); transition: background 0.3s;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-item:hover { background: rgba(201,168,76,0.04); }
+  .stat-num {
+    font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold-bright), var(--gold-shine), var(--gold-bright), var(--gold-dim));
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: goldShimmer 4s linear infinite;
+  }
+  .stat-label { font-size: 11px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; font-weight: 300; }
+
+  /* ── ABOUT ── */
+  .section { max-width: 1100px; margin: 80px auto; padding: 0 24px; }
+
+  .section-tag { font-size: 11px; letter-spacing: 4px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 12px; font-weight: 500; }
+
+  .section-title {
+    font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem);
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold-bright), var(--gold-shine), var(--gold-bright), var(--gold-dim));
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: goldShimmer 5s linear infinite; line-height: 1.2; max-width: 600px;
+  }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 50px; }
+
+  .about-img {
+    background: var(--black-card);
+    background-image: radial-gradient(circle at 30% 70%, rgba(201,168,76,0.09) 0%, transparent 60%),
+                      radial-gradient(circle at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    border: 1px solid rgba(201,168,76,0.13); border-radius: 12px;
+    aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;
+    font-size: 100px; position: relative; overflow: hidden;
+  }
+  .about-img::after { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23c9a84c' fill-opacity='0.05'/%3E%3C/svg%3E"); }
+
+  .benefit-cards { display: flex; flex-direction: column; gap: 20px; }
+
+  .benefit-card {
+    display: flex; gap: 16px; align-items: flex-start; padding: 20px;
+    background: var(--black-card); border-radius: 10px;
+    border: 1px solid rgba(201,168,76,0.1); border-left: 3px solid var(--gold-dim);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .benefit-card:hover { transform: translateX(4px); border-left-color: var(--gold-bright); box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 20px rgba(201,168,76,0.07); }
+  .benefit-icon { font-size: 28px; flex-shrink: 0; }
+  .benefit-title { font-weight: 500; color: var(--gold-light); margin-bottom: 4px; }
+  .benefit-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── PACKAGES ── */
+  .packages {
+    background: var(--black-mid); padding: 80px 24px; text-align: center;
+    border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1);
+  }
+  .packages .section-tag { color: var(--gold-dim); }
+  .packages .section-title { margin: 0 auto 50px; }
+
+  .pkg-grid { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; }
+
+  .pkg-card {
+    background: rgba(201,168,76,0.02); border: 1px solid rgba(201,168,76,0.14);
+    border-radius: 14px; padding: 36px 28px; flex: 1; min-width: 240px; max-width: 300px;
+    transition: all 0.3s; cursor: pointer; position: relative; overflow: hidden;
+  }
+  .pkg-card.featured {
+    background: rgba(201,168,76,0.06); border-color: var(--gold); transform: scale(1.03);
+    box-shadow: 0 0 50px rgba(201,168,76,0.1), inset 0 0 40px rgba(201,168,76,0.02);
+  }
+  .pkg-card::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 60%); opacity:0; transition:opacity 0.3s; }
+  .pkg-card:hover::before { opacity:1; }
+  .pkg-card:hover { border-color: rgba(201,168,76,0.35); box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 25px rgba(201,168,76,0.07); }
+
+  .pkg-badge { font-size: 10px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 12px; }
+
+  .pkg-name {
+    font-family: 'Playfair Display', serif; font-size: 1.6rem;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold-bright), var(--gold-dim));
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: goldShimmer 5s linear infinite; margin-bottom: 8px;
+  }
+  .pkg-price { font-size: 2rem; font-weight: 600; color: var(--gold-light); margin-bottom: 20px; }
+  .pkg-price small { font-size: 14px; font-weight: 300; color: var(--text-muted); }
+
+  .pkg-features { list-style: none; text-align: left; }
+  .pkg-features li {
+    font-size: 14px; color: rgba(201,168,76,0.6); padding: 6px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.07); display: flex; gap: 10px; align-items: center;
+  }
+  .pkg-features li::before { content: '✦'; color: var(--gold-dim); font-size: 10px; }
+
+  /* ── FORM ── */
+  .form-section { max-width: 780px; margin: 80px auto; padding: 0 24px; }
+
+  .form-card {
+    background: var(--black-card); border-radius: 20px; padding: 56px 56px;
+    border: 1px solid rgba(201,168,76,0.18);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.7), 0 0 60px rgba(201,168,76,0.04);
+    position: relative; overflow: hidden;
+  }
+  .form-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), var(--gold-bright), var(--gold-shine), var(--gold-bright), var(--gold-dim), transparent);
+    background-size: 200% auto; animation: goldShimmer 3s linear infinite;
+  }
+
+  .form-title {
+    font-family: 'Playfair Display', serif; font-size: 2rem;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold-bright), var(--gold-shine), var(--gold-bright), var(--gold-dim));
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: goldShimmer 4s linear infinite; margin-bottom: 8px;
+  }
+  .form-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 40px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-group { margin-bottom: 24px; }
+  .form-group label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dim); font-weight: 500; margin-bottom: 8px; }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 14px 16px; border: 1px solid rgba(201,168,76,0.18); border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--gold-light);
+    background: rgba(201,168,76,0.04); transition: all 0.2s; outline: none;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(154,122,53,0.4); }
+  .form-group select option { background: var(--black-card); color: var(--gold-light); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--gold); background: rgba(201,168,76,0.07); box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+  }
+
+  .pkg-selector { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+  .pkg-option {
+    border: 1px solid rgba(201,168,76,0.18); border-radius: 10px; padding: 16px 12px;
+    text-align: center; cursor: pointer; transition: all 0.2s; background: rgba(201,168,76,0.03);
+  }
+  .pkg-option:hover { border-color: var(--gold-dim); }
+  .pkg-option.selected { border-color: var(--gold); background: rgba(201,168,76,0.08); box-shadow: 0 0 20px rgba(201,168,76,0.1); }
+  .pkg-option input[type="radio"] { display: none; }
+  .pkg-opt-name { font-weight: 500; color: var(--gold-light); font-size: 14px; }
+  .pkg-opt-price { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+  .divider { border: none; border-top: 1px solid rgba(201,168,76,0.1); margin: 32px 0; }
+
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold-light), var(--gold-bright), var(--gold-light), var(--gold-dim));
+    background-size: 300% auto; color: #050503; border: none; padding: 18px;
+    font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; border-radius: 10px; cursor: pointer; transition: all 0.3s;
+    animation: goldShimmer 3s linear infinite;
+  }
+  .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(201,168,76,0.3), 0 0 60px rgba(201,168,76,0.12); }
+
+  /* ── CERTIFICATE MODAL ── */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.93);
+    z-index: 1000; display: none; align-items: center; justify-content: center;
+    padding: 20px; backdrop-filter: blur(10px);
+  }
+  .modal-overlay.active { display: flex; }
+
+  .cert-wrapper {
+    background: var(--black-card); border: 1px solid rgba(201,168,76,0.22); border-radius: 16px;
+    padding: 24px; max-width: 760px; width: 100%; max-height: 95vh; overflow-y: auto;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.9), 0 0 60px rgba(201,168,76,0.07);
+    animation: popIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes popIn { from{transform:scale(0.85) translateY(30px);opacity:0} to{transform:scale(1) translateY(0);opacity:1} }
+
+  #certificate {
+    background: linear-gradient(145deg, #0c0a05 0%, #0f0d07 50%, #0c0a05 100%);
+    border: 2px solid var(--gold-dim); border-radius: 10px; padding: 50px 56px;
+    position: relative; font-family: 'DM Sans', sans-serif; overflow: hidden;
+  }
+  #certificate::before { content:''; position:absolute; inset:8px; border:1px solid rgba(201,168,76,0.15); border-radius:6px; pointer-events:none; }
+  #certificate::after {
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), var(--gold-shine), var(--gold-dim), transparent);
+    background-size: 200% auto; animation: goldShimmer 3s linear infinite;
+  }
+
+  .cert-watermark { position:absolute; font-size:180px; color:rgba(201,168,76,0.025); font-family:'Playfair Display',serif; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-30deg); pointer-events:none; user-select:none; white-space:nowrap; }
+
+  .cert-corner { position:absolute; width:60px; height:60px; border-color:var(--gold-dim); border-style:solid; opacity:0.5; }
+  .cert-corner.tl { top:14px; left:14px; border-width:2px 0 0 2px; }
+  .cert-corner.tr { top:14px; right:14px; border-width:2px 2px 0 0; }
+  .cert-corner.bl { bottom:14px; left:14px; border-width:0 0 2px 2px; }
+  .cert-corner.br { bottom:14px; right:14px; border-width:0 2px 2px 0; }
+
+  .cert-header { text-align: center; margin-bottom: 30px; }
+  .cert-org { font-family:'Cinzel',serif; font-size:11px; letter-spacing:5px; color:var(--gold-dim); text-transform:uppercase; margin-bottom:14px; }
+  .cert-logo-icon { font-size:48px; margin-bottom:10px; display:block; }
+  .cert-title { font-family:'Cinzel',serif; font-size:13px; letter-spacing:6px; color:var(--gold-dim); text-transform:uppercase; margin-bottom:8px; }
+  .cert-main-title {
+    font-family:'Playfair Display',serif; font-size:2.6rem;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold-bright), var(--gold-shine), var(--gold-bright), var(--gold-dim));
+    background-size:200% auto;
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    animation: goldShimmer 5s linear infinite; line-height:1.1; margin-bottom:8px;
+  }
+  .cert-subtitle { font-size:12px; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; }
+
+  .cert-divider { display:flex; align-items:center; gap:12px; margin:24px 0; }
+  .cert-divider-line { flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--gold-dim),transparent); }
+  .cert-divider-icon { color:var(--gold-dim); font-size:18px; }
+
+  .cert-body { text-align:center; }
+  .cert-text { font-size:12px; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; }
+  .cert-name {
+    font-family:'Playfair Display',serif; font-size:2.2rem;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold-bright), var(--gold-shine), var(--gold-bright), var(--gold-dim));
+    background-size:200% auto;
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    animation: goldShimmer 4s linear infinite;
+    font-style:italic; border-bottom:1px solid rgba(201,168,76,0.25); display:inline-block; padding-bottom:6px; margin-bottom:20px;
+  }
+  .cert-desc { font-size:14px; color:rgba(154,122,53,0.75); line-height:1.8; max-width:480px; margin:0 auto 24px; }
+  .cert-pkg-badge {
+    display:inline-block;
+    background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.06));
+    border:1px solid var(--gold-dim); color:var(--gold-light);
+    font-family:'Cinzel',serif; font-size:12px; letter-spacing:3px; padding:8px 24px; border-radius:4px; margin-bottom:24px;
+  }
+  .cert-details-grid { display:grid; gap:16px; margin:24px 0; }
+  .cert-detail-item { text-align:center; padding:14px; background:rgba(201,168,76,0.04); border:1px solid rgba(201,168,76,0.1); border-radius:8px; }
+  .cert-detail-label { font-size:10px; letter-spacing:2px; color:var(--text-muted); text-transform:uppercase; margin-bottom:4px; }
+  .cert-detail-value { font-weight:500; color:var(--gold-light); font-size:14px; }
+
+  .cert-footer { display:flex; justify-content:space-between; align-items:flex-end; margin-top:36px; padding-top:20px; border-top:1px solid rgba(201,168,76,0.12); }
+  .cert-sign { text-align:center; }
+  .cert-sign-name { font-family:'Playfair Display',serif; font-style:italic; font-size:18px; color:var(--gold-light); border-bottom:1px solid rgba(201,168,76,0.25); padding-bottom:4px; margin-bottom:4px; }
+  .cert-sign-title { font-size:10px; letter-spacing:2px; color:var(--text-muted); text-transform:uppercase; }
+
+  .cert-seal { width:80px; height:80px; border:2px solid var(--gold-dim); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-direction:column; background:var(--black-card); box-shadow:0 0 20px rgba(201,168,76,0.12),inset 0 0 15px rgba(201,168,76,0.03); }
+  .cert-seal-icon { font-size:28px; }
+  .cert-seal-text { font-size:7px; letter-spacing:2px; color:var(--gold-dim); text-transform:uppercase; }
+  .cert-id { font-size:10px; color:rgba(154,122,53,0.3); letter-spacing:1px; margin-top:16px; text-align:center; }
+
+  .cert-actions { display:flex; gap:12px; margin-top:20px; }
+  .btn-dl { flex:1; padding:14px; border:none; border-radius:8px; font-family:'Cinzel',serif; font-size:12px; font-weight:700; letter-spacing:1px; cursor:pointer; transition:all 0.2s; text-transform:uppercase; }
+  .btn-print { background:linear-gradient(135deg,var(--gold-dim),var(--gold-light),var(--gold-bright),var(--gold-light),var(--gold-dim)); background-size:200% auto; color:#050503; animation:goldShimmer 3s linear infinite; }
+  .btn-print:hover { box-shadow:0 6px 20px rgba(201,168,76,0.35); transform:translateY(-1px); }
+  .btn-close { background:rgba(201,168,76,0.07); color:var(--gold-dim); border:1px solid rgba(201,168,76,0.18); }
+  .btn-close:hover { background:rgba(201,168,76,0.13); }
+
+  /* ── ANALISA ── */
+  .analisa { background: var(--black); padding: 80px 24px; }
+  .analisa-inner { max-width: 1100px; margin: 0 auto; }
+  .analisa-intro { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; margin-top:50px; margin-bottom:60px; }
+  .analisa-text p { font-size:15px; color:var(--text-muted); line-height:1.8; margin-bottom:16px; }
+
+  .asumsi-box { background:var(--black-card); border:1px solid rgba(201,168,76,0.16); border-radius:12px; padding:28px; box-shadow:0 4px 30px rgba(0,0,0,0.4); }
+  .asumsi-title { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--gold-light); margin-bottom:18px; padding-bottom:10px; border-bottom:1px solid rgba(201,168,76,0.1); }
+  .asumsi-row { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px dashed rgba(201,168,76,0.07); font-size:13.5px; }
+  .asumsi-row:last-child { border-bottom:none; }
+  .asumsi-label { color:var(--text-muted); }
+  .asumsi-val { font-weight:500; color:var(--gold-light); }
+
+  .tab-switch { display:flex; gap:8px; margin-bottom:32px; background:var(--black-card); padding:6px; border-radius:12px; border:1px solid rgba(201,168,76,0.14); width:fit-content; box-shadow:0 4px 20px rgba(0,0,0,0.4); }
+  .tab-btn { padding:10px 28px; border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; cursor:pointer; transition:all 0.25s; color:var(--text-muted); background:transparent; }
+  .tab-btn.active { background:linear-gradient(135deg,var(--gold-dim),var(--gold-light),var(--gold-dim)); background-size:200% auto; animation:goldShimmer 4s linear infinite; color:#050503; font-weight:700; box-shadow:0 4px 16px rgba(201,168,76,0.3); }
+
+  .tab-content { display:none; }
+  .tab-content.active { display:block; }
+
+  .analisa-table { width:100%; border-collapse:collapse; background:var(--black-card); border-radius:12px; overflow:hidden; border:1px solid rgba(201,168,76,0.11); box-shadow:0 6px 30px rgba(0,0,0,0.5); margin-bottom:32px; }
+  .analisa-table thead tr { background:linear-gradient(90deg,rgba(201,168,76,0.13),rgba(201,168,76,0.08),rgba(201,168,76,0.13)); border-bottom:1px solid rgba(201,168,76,0.18); }
+  .analisa-table thead th { padding:16px 20px; font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:500; text-align:left; color:var(--gold-light); }
+  .analisa-table tbody tr { border-bottom:1px solid rgba(201,168,76,0.05); transition:background 0.15s; }
+  .analisa-table tbody tr:hover { background:rgba(201,168,76,0.025); }
+  .analisa-table tbody tr:last-child { border-bottom:none; }
+  .analisa-table td { padding:14px 20px; font-size:14px; color:var(--text-muted); }
+  .analisa-table td:first-child { color:rgba(154,122,53,0.85); }
+  .analisa-table td.plus { color:var(--gold-light); font-weight:600; }
+  .analisa-table td.minus { color:#7a4a25; }
+  .analisa-table td.total { color:var(--gold-light); font-weight:700; font-size:15px; }
+  .analisa-table tr.subtotal td { background:rgba(201,168,76,0.05); font-weight:600; color:var(--gold-dim); }
+  .analisa-table tr.grandtotal td { background:linear-gradient(90deg,rgba(201,168,76,0.11),rgba(201,168,76,0.07),rgba(201,168,76,0.11)); color:var(--gold-light); font-weight:700; font-size:15px; border-top:1px solid rgba(201,168,76,0.18); }
+
+  .result-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:32px; }
+  .result-card { background:var(--black-card); border-radius:12px; padding:22px 18px; border:1px solid rgba(201,168,76,0.1); border-top:2px solid var(--gold-dim); text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.4); }
+  .result-card.highlight { border-top-color:var(--gold); background:linear-gradient(135deg,rgba(201,168,76,0.09),rgba(201,168,76,0.03)); box-shadow:0 8px 30px rgba(0,0,0,0.5),0 0 30px rgba(201,168,76,0.08); }
+  .result-label { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px; }
+  .result-value { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--gold-light); font-weight:700; }
+  .result-card.highlight .result-value { background:linear-gradient(135deg,var(--gold-dim),var(--gold-bright),var(--gold-shine),var(--gold-bright),var(--gold-dim)); background-size:200% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:goldShimmer 3s linear infinite; }
+  .result-note { font-size:11px; color:var(--text-faint); margin-top:4px; }
+
+  .roi-bar-wrap { background:var(--black-card); border-radius:12px; padding:28px 32px; border:1px solid rgba(201,168,76,0.11); margin-bottom:24px; }
+  .roi-bar-title { font-size:13px; color:var(--text-muted); margin-bottom:16px; font-weight:500; }
+  .roi-bar-item { margin-bottom:16px; }
+  .roi-bar-head { display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px; }
+  .roi-bar-name { color:var(--gold-dim); font-weight:500; }
+  .roi-bar-pct { color:var(--gold-light); font-weight:600; }
+  .roi-bar-bg { background:rgba(201,168,76,0.07); border-radius:8px; height:10px; overflow:hidden; }
+  .roi-bar-fill { height:100%; border-radius:8px; background:linear-gradient(90deg,var(--gold-dim),var(--gold-light),var(--gold-bright)); background-size:200% auto; animation:goldShimmer 3s linear infinite; transition:width 1.2s cubic-bezier(0.34,1.56,0.64,1); width:0%; }
+
+  .note-box { background:rgba(201,168,76,0.04); border:1px solid rgba(201,168,76,0.14); border-radius:10px; padding:18px 22px; font-size:13px; color:var(--text-muted); line-height:1.7; }
+  .note-box strong { color:var(--gold-dim); }
+
+  /* ── FOOTER ── */
+  footer { background:var(--black-mid); border-top:1px solid rgba(201,168,76,0.1); color:var(--text-muted); text-align:center; padding:40px 24px; font-size:13px; }
+  footer strong { background:linear-gradient(90deg,var(--gold-dim),var(--gold-bright),var(--gold-dim)); background-size:200% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:goldShimmer 4s linear infinite; }
+
+  @media (max-width: 700px) {
+    .about-grid, .analisa-intro { grid-template-columns: 1fr; gap: 28px; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-card { padding: 36px 24px; }
+    .pkg-selector { grid-template-columns: 1fr; }
+    .cert-footer { flex-direction: column; gap: 24px; align-items: center; }
+    #certificate { padding: 36px 28px; }
+    .cert-main-title { font-size: 2rem; }
+    .result-cards { grid-template-columns: 1fr 1fr; }
+    .tab-switch { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="leaf-deco">🌿</div>
+  <div class="leaf-deco2">🍃</div>
+  <div class="hero-badge">🌿 Jaga Ngariksa Leweung — Gunung Guruh, Sukabumi</div>
+  <h1>Balik ka Akar,<br><em>Nuju Hareup</em></h1>
+  <p class="hero-sub" style="font-style:italic;color:rgba(253,248,240,0.6);font-size:14px;margin-bottom:10px;">"Kembali ke Akar, Menuju Masa Depan"</p>
+  <p class="hero-sub">Bergabunglah dalam program <strong style="color:var(--green-light)">Jaga Ngariksa Leweung</strong> — investasi tanam labu siam yang menghidupi petani, menjaga alam, dan mengalirkan manfaat nyata bagi masyarakat Sukabumi.</p>
+  <button class="hero-cta" onclick="document.getElementById('daftar').scrollIntoView({behavior:'smooth'})">
+    Daftar Sebagai Investor →
+  </button>
+</section>
+
+<!-- STATS -->
+<div class="stats" style="position:relative;z-index:10;transform:translateY(-30px);margin-top:0;">
+  <div class="stat-item">
+    <div class="stat-num">Rp 500</div>
+    <div class="stat-label">Harga / Buah</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">150–300</div>
+    <div class="stat-label">Buah / Pohon / Musim</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">2–3×</div>
+    <div class="stat-label">Panen / Tahun</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">47+</div>
+    <div class="stat-label">Petani Mitra</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <div class="section-tag">Tentang Program</div>
+  <div class="section-title">Kembali ke Akar,<br>Menuju Masa Depan</div>
+  <p style="color:var(--text-mid);font-size:15px;line-height:1.8;max-width:640px;margin:16px 0 40px;font-style:italic;">"Jaga Ngariksa Leweung" — menjaga dan merawat hutan, adalah warisan leluhur yang hari ini kita wujudkan melalui tanam, rawat, dan bagi hasil bersama."</p>
+  <div class="about-grid">
+    <div class="about-img">🌿</div>
+    <div class="benefit-cards">
+      <div class="benefit-card">
+        <div class="benefit-icon">🌿</div>
+        <div>
+          <div class="benefit-title">Tanaman Produktif Sepanjang Tahun</div>
+          <div class="benefit-desc">Labu siam adalah tanaman tahunan yang terus berbuah — satu pohon mampu menghasilkan 150–300 buah per musim, dengan 2–3 musim panen per tahun.</div>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
+        <div>
+          <div class="benefit-title">Bagi Hasil dari Omzet Nyata</div>
+          <div class="benefit-desc">Bagi hasil dihitung dari total penjualan buah (Rp 500/buah), bukan keuntungan bersih. Transparan, terukur, dan dibayarkan tiap musim panen.</div>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📊</div>
+        <div>
+          <div class="benefit-title">Laporan Per Pohon</div>
+          <div class="benefit-desc">Setiap investor mendapat laporan jumlah buah per pohon tiap musim. Data nyata, bukan perkiraan luas lahan.</div>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">❤️</div>
+        <div>
+          <div class="benefit-title">10% untuk Donasi Sosial</div>
+          <div class="benefit-desc">Setiap panen, 10% omzet otomatis disalurkan untuk program sosial petani lokal Sukabumi — investasi yang memberi dampak nyata.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<section class="packages">
+  <div class="section-tag">Paket Investasi</div>
+  <div class="section-title">Pilih Cara Anda Ikut Menjaga</div>
+  <p style="color:rgba(253,248,240,0.65);font-size:15px;margin-top:14px;margin-bottom:48px;font-weight:300;font-style:italic;">Harga labu siam <strong style="color:var(--gold-light)">Rp 500/buah</strong> · Hasil per pohon <strong style="color:var(--gold-light)">150–300 buah/musim</strong> · Jika tidak ada afliator, 5% kembali ke pemodal</p>
+  <div class="pkg-grid" style="justify-content:center;gap:36px;">
+    <div class="pkg-card" style="max-width:340px;">
+      <div class="pkg-badge">🌱 Paket Satu — Pemula</div>
+      <div class="pkg-name">Tanam Bersama</div>
+      <div class="pkg-price">Rp 50.000 <small>/ pohon</small></div>
+      <div style="font-size:12px;color:rgba(253,248,240,0.5);margin-bottom:20px;">Minimal 100 pohon = Rp 5.000.000</div>
+      <ul class="pkg-features">
+        <li>Modal Rp 50.000 per pohon</li>
+        <li>Min. 100 pohon per investor</li>
+        <li><strong style="color:var(--gold-light)">Pemodal 35%</strong> dari omzet</li>
+        <li>Pengelola 50%</li>
+        <li>Afliator 5% (bila ada)</li>
+        <li>Donasi sosial 10%</li>
+        <li>Sertifikat digital resmi</li>
+        <li>Laporan tiap musim panen</li>
+      </ul>
+    </div>
+    <div class="pkg-card featured" style="max-width:340px;">
+      <div class="pkg-badge">⭐ Paket Dua — Premium</div>
+      <div class="pkg-name">Tanam Utama</div>
+      <div class="pkg-price">Rp 100.000 <small>/ pohon</small></div>
+      <div style="font-size:12px;color:rgba(253,248,240,0.6);margin-bottom:20px;">Minimal 50 pohon = Rp 5.000.000</div>
+      <ul class="pkg-features">
+        <li>Modal Rp 100.000 per pohon</li>
+        <li>Min. 50 pohon per investor</li>
+        <li><strong style="color:var(--gold-light)">Pemodal 50%</strong> dari omzet</li>
+        <li>Pengelola 35%</li>
+        <li>Afliator 5% (bila ada)</li>
+        <li>Donasi sosial 10%</li>
+        <li>Sertifikat + kunjungan lahan</li>
+        <li>Laporan prioritas + WA grup</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bagi Hasil Visual -->
+  <div style="max-width:780px;margin:56px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(82,183,136,0.2);border-radius:14px;padding:28px;">
+      <div style="font-size:11px;letter-spacing:3px;color:var(--gold-light);text-transform:uppercase;margin-bottom:18px;">Distribusi Bagi Hasil — Paket Satu</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:rgba(253,248,240,0.8);font-size:14px;">🧑‍💼 Pemodal</span><span style="background:var(--green-mid);color:white;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;">35% <em style="opacity:0.75;">(+5% jika tanpa afliator)</em></span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:rgba(253,248,240,0.8);font-size:14px;">🌾 Pengelola</span><span style="background:rgba(255,255,255,0.1);color:rgba(253,248,240,0.7);padding:4px 14px;border-radius:20px;font-size:13px;">50%</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:rgba(253,248,240,0.8);font-size:14px;">🤝 Afliator <em style="font-size:11px;opacity:0.6;">(bila ada)</em></span><span style="background:rgba(255,255,255,0.1);color:rgba(253,248,240,0.7);padding:4px 14px;border-radius:20px;font-size:13px;">5%</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:rgba(253,248,240,0.8);font-size:14px;">❤️ Donasi Sosial</span><span style="background:rgba(255,255,255,0.1);color:rgba(253,248,240,0.7);padding:4px 14px;border-radius:20px;font-size:13px;">10%</span></div>
+      </div>
+      <div style="margin-top:14px;padding:10px 12px;background:rgba(82,183,136,0.12);border-radius:8px;font-size:12px;color:rgba(253,248,240,0.65);line-height:1.6;">
+        ✦ Tanpa afliator → pemodal mendapat <strong style="color:var(--gold-light)">40%</strong>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.09);border:1px solid var(--gold);border-radius:14px;padding:28px;">
+      <div style="font-size:11px;letter-spacing:3px;color:var(--gold-light);text-transform:uppercase;margin-bottom:18px;">Distribusi Bagi Hasil — Paket Dua</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:rgba(253,248,240,0.9);font-size:14px;">🧑‍💼 Pemodal</span><span style="background:var(--gold);color:var(--green-deep);padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;">50% <em style="opacity:0.7;">(+5% jika tanpa afliator)</em></span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:rgba(253,248,240,0.8);font-size:14px;">🌾 Pengelola</span><span style="background:rgba(255,255,255,0.1);color:rgba(253,248,240,0.7);padding:4px 14px;border-radius:20px;font-size:13px;">35%</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:rgba(253,248,240,0.8);font-size:14px;">🤝 Afliator <em style="font-size:11px;opacity:0.6;">(bila ada)</em></span><span style="background:rgba(255,255,255,0.1);color:rgba(253,248,240,0.7);padding:4px 14px;border-radius:20px;font-size:13px;">5%</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="color:rgba(253,248,240,0.8);font-size:14px;">❤️ Donasi Sosial</span><span style="background:rgba(255,255,255,0.1);color:rgba(253,248,240,0.7);padding:4px 14px;border-radius:20px;font-size:13px;">10%</span></div>
+      </div>
+      <div style="margin-top:14px;padding:10px 12px;background:rgba(201,168,76,0.1);border-radius:8px;font-size:12px;color:rgba(253,248,240,0.65);line-height:1.6;">
+        ✦ Tanpa afliator → pemodal mendapat <strong style="color:var(--gold-light)">55%</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALISA USAHA -->
+<section class="analisa">
+  <div class="analisa-inner">
+    <div class="section-tag">Analisa Usaha</div>
+    <div class="section-title">Proyeksi Keuntungan Nyata</div>
+
+    <div class="analisa-intro">
+      <div class="analisa-text">
+        <p>Sistem <strong>Jaga Ngariksa Leweung</strong> dihitung langsung dari <strong>jumlah buah × harga jual Rp 500/buah</strong>. Semua transparan — berbasis pohon dan buah, bukan kilogram atau meter persegi.</p>
+        <p>Satu pohon labu siam mampu menghasilkan <strong>150–300 buah per musim</strong>. Analisa disajikan dalam tiga skenario: minimum, rata-rata, dan maksimum agar pemodal memiliki gambaran yang jujur dan realistis.</p>
+        <p>Jika tidak ada afliator, <strong>5% kembali ke pemodal</strong> — sehingga Paket Satu menjadi <strong>40%</strong> dan Paket Dua menjadi <strong>55%</strong>. Biaya operasional sepenuhnya ditanggung pengelola dari porsinya sendiri.</p>
+      </div>
+      <div class="asumsi-box">
+        <div class="asumsi-title">📋 Parameter Sistem Investasi</div>
+        <div class="asumsi-row"><span class="asumsi-label">Harga jual labu siam</span><span class="asumsi-val">Rp 500 / buah</span></div>
+        <div class="asumsi-row"><span class="asumsi-label">Hasil per pohon (minimum)</span><span class="asumsi-val">150 buah / musim</span></div>
+        <div class="asumsi-row"><span class="asumsi-label">Hasil per pohon (rata-rata)</span><span class="asumsi-val">225 buah / musim</span></div>
+        <div class="asumsi-row"><span class="asumsi-label">Hasil per pohon (maksimum)</span><span class="asumsi-val">300 buah / musim</span></div>
+        <div class="asumsi-row"><span class="asumsi-label">Panen per tahun</span><span class="asumsi-val">2–3 kali</span></div>
+        <div class="asumsi-row"><span class="asumsi-label">Bagi hasil dihitung dari</span><span class="asumsi-val">Omzet buah (gross)</span></div>
+        <div class="asumsi-row"><span class="asumsi-label">Biaya operasional</span><span class="asumsi-val">Tanggungan pengelola</span></div>
+      </div>
+    </div>
+
+    <!-- Tab Switcher -->
+    <div class="tab-switch">
+      <button class="tab-btn active" onclick="switchTab('p1')">🌱 Paket Satu (Rp 50rb/pohon)</button>
+      <button class="tab-btn" onclick="switchTab('p2')">⭐ Paket Dua (Rp 100rb/pohon)</button>
+    </div>
+
+    <!-- ─── TAB: PAKET SATU ─── -->
+    <div class="tab-content active" id="tab-p1">
+
+      <!-- Scenario cards -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;">
+        <div style="background:white;border-radius:12px;padding:20px;box-shadow:0 4px 15px rgba(26,61,43,0.07);border-top:3px solid #aaa;text-align:center;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:8px;">Skenario Minimum</div>
+          <div style="font-size:12px;color:var(--text-mid);margin-bottom:6px;">150 buah/pohon</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--green-deep);">Rp 2.625.000</div>
+          <div style="font-size:11px;color:var(--text-mid);margin-top:4px;">ROI 52.5% / musim</div>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border-radius:12px;padding:20px;box-shadow:0 8px 25px rgba(26,61,43,0.2);border-top:3px solid var(--gold);text-align:center;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(253,248,240,0.7);margin-bottom:8px;">⭐ Skenario Rata-Rata</div>
+          <div style="font-size:12px;color:rgba(253,248,240,0.7);margin-bottom:6px;">225 buah/pohon</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);">Rp 3.937.500</div>
+          <div style="font-size:11px;color:rgba(253,248,240,0.65);margin-top:4px;">ROI 78.75% / musim</div>
+        </div>
+        <div style="background:white;border-radius:12px;padding:20px;box-shadow:0 4px 15px rgba(26,61,43,0.07);border-top:3px solid var(--green-light);text-align:center;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--green-mid);margin-bottom:8px;">🚀 Skenario Maksimum</div>
+          <div style="font-size:12px;color:var(--text-mid);margin-bottom:6px;">300 buah/pohon</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--green-deep);">Rp 5.250.000</div>
+          <div style="font-size:11px;color:var(--text-mid);margin-top:4px;">ROI 105% / musim</div>
+        </div>
+      </div>
+
+      <table class="analisa-table">
+        <thead>
+          <tr>
+            <th>Uraian</th>
+            <th>Min (150 bh)</th>
+            <th>Rata-rata (225 bh)</th>
+            <th>Maks (300 bh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="4" style="background:rgba(82,183,136,0.05);font-size:12px;letter-spacing:1px;color:var(--green-mid);text-transform:uppercase;padding:10px 20px;font-weight:500;">📊 Dasar Perhitungan — 100 Pohon</td></tr>
+          <tr><td>Total buah dipanen</td><td>15.000 buah</td><td>22.500 buah</td><td>30.000 buah</td></tr>
+          <tr><td>Modal investor (100 pohon)</td><td colspan="3" class="total" style="text-align:center;">Rp 5.000.000 (100 pohon × Rp 50.000)</td></tr>
+          <tr class="subtotal"><td>Omzet kotor (buah × Rp 500)</td><td>Rp 7.500.000</td><td>Rp 11.250.000</td><td>Rp 15.000.000</td></tr>
+
+          <tr><td colspan="4" style="background:rgba(82,183,136,0.05);font-size:12px;letter-spacing:1px;color:var(--green-mid);text-transform:uppercase;padding:10px 20px;font-weight:500;">💰 Distribusi Bagi Hasil dari Omzet</td></tr>
+          <tr><td>🧑‍💼 Pemodal <strong>(35%)</strong></td><td class="plus">Rp 2.625.000</td><td class="plus">Rp 3.937.500</td><td class="plus">Rp 5.250.000</td></tr>
+          <tr><td>🌾 Pengelola (50%)</td><td>Rp 3.750.000</td><td>Rp 5.625.000</td><td>Rp 7.500.000</td></tr>
+          <tr><td>🤝 Afliator (5%)</td><td>Rp 375.000</td><td>Rp 562.500</td><td>Rp 750.000</td></tr>
+          <tr><td>❤️ Donasi Sosial (10%)</td><td>Rp 750.000</td><td>Rp 1.125.000</td><td>Rp 1.500.000</td></tr>
+
+          <tr><td colspan="4" style="background:rgba(26,61,43,0.05);font-size:12px;letter-spacing:1px;color:var(--green-deep);text-transform:uppercase;padding:10px 20px;font-weight:500;">📈 ROI Investor per Musim</td></tr>
+          <tr class="grandtotal"><td>🏆 Return Investor / Musim</td><td>Rp 2.625.000 (52.5%)</td><td>Rp 3.937.500 (78.75%)</td><td>Rp 5.250.000 (105%)</td></tr>
+          <tr class="grandtotal"><td>🏆 Return Investor / Tahun (×2)</td><td>Rp 5.250.000 (105%)</td><td>Rp 7.875.000 (157.5%)</td><td>Rp 10.500.000 (210%)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="roi-bar-wrap">
+        <div class="roi-bar-title">Proyeksi Kumulatif Return Paket Satu — Per Musim Panen (Modal Rp 5.000.000, asumsi rata-rata)</div>
+        <div class="roi-bar-item"><div class="roi-bar-head"><span class="roi-bar-name">🌱 Musim ke-1</span><span class="roi-bar-pct">Rp 3.937.500</span></div><div class="roi-bar-bg"><div class="roi-bar-fill" data-w="78.75"></div></div></div>
+        <div class="roi-bar-item"><div class="roi-bar-head"><span class="roi-bar-name">🌿 Musim ke-2 — Modal Kembali ✅</span><span class="roi-bar-pct">Rp 7.875.000</span></div><div class="roi-bar-bg"><div class="roi-bar-fill" data-w="100" style="background:linear-gradient(90deg,var(--green-mid),var(--green-light))"></div></div></div>
+        <div class="roi-bar-item"><div class="roi-bar-head"><span class="roi-bar-name">🌾 Musim ke-3 (Pure Profit) 🎉</span><span class="roi-bar-pct" style="color:var(--gold)">Rp 11.812.500</span></div><div class="roi-bar-bg"><div class="roi-bar-fill" data-w="100" style="background:linear-gradient(90deg,var(--gold),var(--gold-light))"></div></div></div>
+      </div>
+
+      <div class="note-box" style="margin-top:0;">
+        💡 <strong>Catatan Paket Satu:</strong> Modal Rp 5.000.000 sudah bisa kembali hanya dalam <strong>2 musim panen (~8 bulan)</strong> dengan asumsi rata-rata. Mulai musim ke-3, semua hasil adalah keuntungan murni selama pohon masih produktif.
+      </div>
+    </div>
+
+    <!-- ─── TAB: PAKET DUA ─── -->
+    <div class="tab-content" id="tab-p2">
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;">
+        <div style="background:white;border-radius:12px;padding:20px;box-shadow:0 4px 15px rgba(26,61,43,0.07);border-top:3px solid #aaa;text-align:center;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:8px;">Skenario Minimum</div>
+          <div style="font-size:12px;color:var(--text-mid);margin-bottom:6px;">150 buah/pohon</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--green-deep);">Rp 1.875.000</div>
+          <div style="font-size:11px;color:var(--text-mid);margin-top:4px;">ROI 37.5% / musim</div>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border-radius:12px;padding:20px;box-shadow:0 8px 25px rgba(26,61,43,0.2);border-top:3px solid var(--gold);text-align:center;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(253,248,240,0.7);margin-bottom:8px;">⭐ Skenario Rata-Rata</div>
+          <div style="font-size:12px;color:rgba(253,248,240,0.7);margin-bottom:6px;">225 buah/pohon</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);">Rp 2.812.500</div>
+          <div style="font-size:11px;color:rgba(253,248,240,0.65);margin-top:4px;">ROI 56.25% / musim</div>
+        </div>
+        <div style="background:white;border-radius:12px;padding:20px;box-shadow:0 4px 15px rgba(26,61,43,0.07);border-top:3px solid var(--green-light);text-align:center;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--green-mid);margin-bottom:8px;">🚀 Skenario Maksimum</div>
+          <div style="font-size:12px;color:var(--text-mid);margin-bottom:6px;">300 buah/pohon</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--green-deep);">Rp 3.750.000</div>
+          <div style="font-size:11px;color:var(--text-mid);margin-top:4px;">ROI 75% / musim</div>
+        </div>
+      </div>
+
+      <table class="analisa-table">
+        <thead>
+          <tr>
+            <th>Uraian</th>
+            <th>Min (150 bh)</th>
+            <th>Rata-rata (225 bh)</th>
+            <th>Maks (300 bh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="4" style="background:rgba(82,183,136,0.05);font-size:12px;letter-spacing:1px;color:var(--green-mid);text-transform:uppercase;padding:10px 20px;font-weight:500;">📊 Dasar Perhitungan — 50 Pohon</td></tr>
+          <tr><td>Total buah dipanen</td><td>7.500 buah</td><td>11.250 buah</td><td>15.000 buah</td></tr>
+          <tr><td>Modal investor (50 pohon)</td><td colspan="3" class="total" style="text-align:center;">Rp 5.000.000 (50 pohon × Rp 100.000)</td></tr>
+          <tr class="subtotal"><td>Omzet kotor (buah × Rp 500)</td><td>Rp 3.750.000</td><td>Rp 5.625.000</td><td>Rp 7.500.000</td></tr>
+
+          <tr><td colspan="4" style="background:rgba(82,183,136,0.05);font-size:12px;letter-spacing:1px;color:var(--green-mid);text-transform:uppercase;padding:10px 20px;font-weight:500;">💰 Distribusi Bagi Hasil dari Omzet</td></tr>
+          <tr><td>🧑‍💼 Pemodal <strong>(50%)</strong></td><td class="plus">Rp 1.875.000</td><td class="plus">Rp 2.812.500</td><td class="plus">Rp 3.750.000</td></tr>
+          <tr><td>🌾 Pengelola (35%)</td><td>Rp 1.312.500</td><td>Rp 1.968.750</td><td>Rp 2.625.000</td></tr>
+          <tr><td>🤝 Afliator (5%)</td><td>Rp 187.500</td><td>Rp 281.250</td><td>Rp 375.000</td></tr>
+          <tr><td>❤️ Donasi Sosial (10%)</td><td>Rp 375.000</td><td>Rp 562.500</td><td>Rp 750.000</td></tr>
+
+          <tr><td colspan="4" style="background:rgba(26,61,43,0.05);font-size:12px;letter-spacing:1px;color:var(--green-deep);text-transform:uppercase;padding:10px 20px;font-weight:500;">📈 ROI Investor per Musim</td></tr>
+          <tr class="grandtotal"><td>🏆 Return Investor / Musim</td><td>Rp 1.875.000 (37.5%)</td><td>Rp 2.812.500 (56.25%)</td><td>Rp 3.750.000 (75%)</td></tr>
+          <tr class="grandtotal"><td>🏆 Return Investor / Tahun (×2)</td><td>Rp 3.750.000 (75%)</td><td>Rp 5.625.000 (112.5%)</td><td>Rp 7.500.000 (150%)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="roi-bar-wrap">
+        <div class="roi-bar-title">Proyeksi Kumulatif Return Paket Dua — Per Musim Panen (Modal Rp 5.000.000, asumsi rata-rata)</div>
+        <div class="roi-bar-item"><div class="roi-bar-head"><span class="roi-bar-name">🌱 Musim ke-1</span><span class="roi-bar-pct">Rp 2.812.500</span></div><div class="roi-bar-bg"><div class="roi-bar-fill" data-w="56.25"></div></div></div>
+        <div class="roi-bar-item"><div class="roi-bar-head"><span class="roi-bar-name">🌿 Musim ke-2</span><span class="roi-bar-pct">Rp 5.625.000</span></div><div class="roi-bar-bg"><div class="roi-bar-fill" data-w="100" style="background:linear-gradient(90deg,var(--green-mid),var(--green-light))"></div></div></div>
+        <div class="roi-bar-item"><div class="roi-bar-head"><span class="roi-bar-name">🌾 Musim ke-3 — Modal Kembali ✅</span><span class="roi-bar-pct">Rp 8.437.500</span></div><div class="roi-bar-bg"><div class="roi-bar-fill" data-w="100" style="background:linear-gradient(90deg,var(--gold),var(--gold-light))"></div></div></div>
+      </div>
+
+      <div class="note-box" style="margin-top:0;">
+        💡 <strong>Catatan Paket Dua:</strong> Meski ROI per musim lebih kecil dari Paket Satu, investor mendapat <strong>porsi 50% yang lebih besar per pohon</strong>, cocok untuk investasi jangka panjang dengan jumlah pohon yang lebih sedikit namun pengelolaan lebih intensif.
+      </div>
+    </div>
+
+    <!-- Perbandingan -->
+    <div style="margin-top:36px;">
+      <div class="asumsi-box" style="max-width:100%;">
+        <div class="asumsi-title">⚖️ Perbandingan Langsung — Modal Rp 5.000.000 (Asumsi Rata-Rata)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:4px;">
+          <div style="padding:12px 0;font-size:13px;color:var(--text-mid);font-weight:500;border-bottom:1px solid rgba(82,183,136,0.15);">Indikator</div>
+          <div style="padding:12px;font-size:13px;color:var(--green-deep);font-weight:600;border-bottom:1px solid rgba(82,183,136,0.15);text-align:center;">🌱 Paket Satu</div>
+          <div style="padding:12px;font-size:13px;color:var(--green-deep);font-weight:600;border-bottom:1px solid rgba(82,183,136,0.15);text-align:center;">⭐ Paket Dua</div>
+
+          <div style="padding:10px 0;font-size:13px;color:var(--text-mid);border-bottom:1px dashed rgba(82,183,136,0.1);">Jumlah pohon</div>
+          <div style="padding:10px;font-size:13px;color:var(--green-deep);text-align:center;border-bottom:1px dashed rgba(82,183,136,0.1);">100 pohon</div>
+          <div style="padding:10px;font-size:13px;color:var(--green-deep);text-align:center;border-bottom:1px dashed rgba(82,183,136,0.1);">50 pohon</div>
+
+          <div style="padding:10px 0;font-size:13px;color:var(--text-mid);border-bottom:1px dashed rgba(82,183,136,0.1);">Return / musim</div>
+          <div style="padding:10px;font-size:13px;font-weight:700;color:var(--green-mid);text-align:center;border-bottom:1px dashed rgba(82,183,136,0.1);">Rp 3.937.500 ✅</div>
+          <div style="padding:10px;font-size:13px;color:var(--text-mid);text-align:center;border-bottom:1px dashed rgba(82,183,136,0.1);">Rp 2.812.500</div>
+
+          <div style="padding:10px 0;font-size:13px;color:var(--text-mid);border-bottom:1px dashed rgba(82,183,136,0.1);">ROI / musim</div>
+          <div style="padding:10px;font-size:13px;font-weight:700;color:var(--green-mid);text-align:center;border-bottom:1px dashed rgba(82,183,136,0.1);">78.75% ✅</div>
+          <div style="padding:10px;font-size:13px;color:var(--text-mid);text-align:center;border-bottom:1px dashed rgba(82,183,136,0.1);">56.25%</div>
+
+          <div style="padding:10px 0;font-size:13px;color:var(--text-mid);border-bottom:1px dashed rgba(82,183,136,0.1);">Balik modal</div>
+          <div style="padding:10px;font-size:13px;font-weight:700;color:var(--green-mid);text-align:center;border-bottom:1px dashed rgba(82,183,136,0.1);">2 musim ✅</div>
+          <div style="padding:10px;font-size:13px;color:var(--text-mid);text-align:center;border-bottom:1px dashed rgba(82,183,136,0.1);">2–3 musim</div>
+
+          <div style="padding:10px 0;font-size:13px;color:var(--text-mid);">Cocok untuk</div>
+          <div style="padding:10px;font-size:12px;color:var(--text-mid);text-align:center;">Investor aktif & afliator</div>
+          <div style="padding:10px;font-size:12px;color:var(--text-mid);text-align:center;">Investasi jangka panjang</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:24px;">
+      ⚠️ <strong>Disclaimer:</strong> Proyeksi berdasarkan kondisi panen normal. Hasil aktual bergantung pada cuaca, perawatan, dan kondisi pasar. Afliator mendapat 5% dari omzet hanya jika ada kode afliasi yang valid saat pendaftaran. Donasi sosial 10% disalurkan untuk program sosial petani lokal Sukabumi.
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+
+<div class="form-section" id="daftar">
+  <div class="form-card">
+    <div class="form-title">Daftar Sebagai Investor 🌿</div>
+    <div class="form-sub">Isi formulir di bawah untuk bergabung. Sertifikat investor akan langsung diterbitkan setelah pendaftaran.</div>
+
+    <div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nama Lengkap *</label>
+          <input type="text" id="f-nama" placeholder="Nama sesuai KTP" required>
+        </div>
+        <div class="form-group">
+          <label>No. KTP / NIK *</label>
+          <input type="text" id="f-nik" placeholder="16 digit NIK" maxlength="16">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nomor WhatsApp *</label>
+          <input type="tel" id="f-wa" placeholder="08xxxxxxxxxx">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="f-email" placeholder="email@contoh.com">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Alamat Domisili</label>
+        <input type="text" id="f-alamat" placeholder="Kota / Kabupaten, Provinsi">
+      </div>
+
+      <hr class="divider">
+
+      <div class="form-group">
+        <label>Pilih Paket Investasi *</label>
+        <div class="pkg-selector" style="grid-template-columns:1fr 1fr;">
+          <label class="pkg-option selected" onclick="selectPkg(this, 'Paket Satu')">
+            <input type="radio" name="paket" value="Paket Satu" checked>
+            <div class="pkg-opt-name">🌱 Paket Satu</div>
+            <div class="pkg-opt-price">Rp 50.000/pohon · Min 100 pohon</div>
+            <div style="font-size:11px;color:var(--green-mid);margin-top:4px;">Bagi hasil 35%</div>
+          </label>
+          <label class="pkg-option" onclick="selectPkg(this, 'Paket Dua')">
+            <input type="radio" name="paket" value="Paket Dua">
+            <div class="pkg-opt-name">⭐ Paket Dua</div>
+            <div class="pkg-opt-price">Rp 100.000/pohon · Min 50 pohon</div>
+            <div style="font-size:11px;color:var(--green-mid);margin-top:4px;">Bagi hasil 50%</div>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Jumlah Pohon *</label>
+          <input type="number" id="f-jumlah" placeholder="Min. 100 pohon (Paket 1) / 50 pohon (Paket 2)" min="50">
+        </div>
+        <div class="form-group">
+          <label>Kode Afliator (opsional)</label>
+          <input type="text" id="f-afliator" placeholder="Kode afliasi bila ada">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Pertanyaan / Catatan (opsional)</label>
+        <textarea id="f-catatan" rows="3" placeholder="Pertanyaan atau catatan tambahan..."></textarea>
+      </div>
+
+      <button class="submit-btn" onclick="daftarInvestor()">
+        ✨ Daftar & Terbitkan Sertifikat
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>🌿 <strong>Jaga Ngariksa Leweung</strong> — Program Investasi Labu Siam Organik</p>
+  <p style="margin-top:6px;font-style:italic;color:rgba(253,248,240,0.5);font-size:13px;">"Kembali ke Akar, Menuju Masa Depan"</p>
+  <p style="margin-top:8px;">Kampung Pasir Ipis, Gunung Guruh, Sukabumi, Jawa Barat | WA: 083871666136</p>
+  <p style="margin-top:8px;font-size:11px;opacity:0.4;">© 2025 Jaga Ngariksa Leweung. Sertifikat diterbitkan secara digital.</p>
+</footer>
+
+<!-- CERTIFICATE MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="cert-wrapper">
+    <div id="certificate">
+      <!-- Decorative corners -->
+      <div class="cert-corner tl"></div>
+      <div class="cert-corner tr"></div>
+      <div class="cert-corner bl"></div>
+      <div class="cert-corner br"></div>
+      <div class="cert-watermark">🌿</div>
+
+      <div class="cert-header">
+        <div class="cert-org">Jaga Ngariksa Leweung — Gunung Guruh, Sukabumi</div>
+        <span class="cert-logo-icon">🌿</span>
+        <div class="cert-title">Sertifikat Resmi</div>
+        <div class="cert-main-title">Investor Mitra Tani</div>
+        <div class="cert-subtitle">Kembali ke Akar · Menuju Masa Depan</div>
+      </div>
+
+      <div class="cert-divider">
+        <div class="cert-divider-line"></div>
+        <div class="cert-divider-icon">❧</div>
+        <div class="cert-divider-line"></div>
+      </div>
+
+      <div class="cert-body">
+        <div class="cert-text">Diberikan Kepada</div>
+        <div class="cert-name" id="cert-nama">Nama Investor</div>
+        <div class="cert-pkg-badge" id="cert-paket">PAKET TUMBUH</div>
+        <p class="cert-desc">
+          Dengan ini dinyatakan telah resmi bergabung sebagai <strong>Investor Mitra Tani</strong> dalam Program <em>Jaga Ngariksa Leweung</em> — budidaya labu siam organik di Kampung Pasir Ipis, Gunung Guruh, Sukabumi, Jawa Barat.
+        </p>
+
+        <div class="cert-details-grid" style="grid-template-columns:repeat(4,1fr);">
+          <div class="cert-detail-item">
+            <div class="cert-detail-label">No. Investor</div>
+            <div class="cert-detail-value" id="cert-id">SGF-0001</div>
+          </div>
+          <div class="cert-detail-item">
+            <div class="cert-detail-label">Tanggal Daftar</div>
+            <div class="cert-detail-value" id="cert-tanggal">—</div>
+          </div>
+          <div class="cert-detail-item">
+            <div class="cert-detail-label">Jumlah Pohon</div>
+            <div class="cert-detail-value" id="cert-jumlah">100 pohon</div>
+          </div>
+          <div class="cert-detail-item">
+            <div class="cert-detail-label">Total Modal</div>
+            <div class="cert-detail-value" id="cert-modal">Rp 5.000.000</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-footer">
+        <div class="cert-sign">
+          <div class="cert-sign-name">Hudri</div>
+          <div class="cert-sign-title">Koordinator Program</div>
+        </div>
+        <div class="cert-seal">
+          <div class="cert-seal-icon">🌿</div>
+          <div class="cert-seal-text">Verified</div>
+        </div>
+        <div class="cert-sign">
+          <div class="cert-sign-name">Sukabumi Green Farm</div>
+          <div class="cert-sign-title">Gunung Guruh, Sukabumi</div>
+        </div>
+      </div>
+
+      <div class="cert-id" id="cert-kode">SGF/INV/2025/0001</div>
+    </div>
+
+    <div class="cert-actions">
+      <button class="btn-dl btn-print" onclick="printCert()">🖨️ Cetak / Simpan PDF</button>
+      <button class="btn-dl btn-close" onclick="closeModal()">✕ Tutup</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let selectedPaket = 'Paket Satu';
+
+  function selectPkg(el, paket) {
+    document.querySelectorAll('.pkg-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedPaket = paket;
+  }
+
+  function genID() {
+    return Math.floor(Math.random() * 9000) + 1000;
+  }
+
+  function daftarInvestor() {
+    const nama = document.getElementById('f-nama').value.trim();
+    const wa = document.getElementById('f-wa').value.trim();
+    const jumlahPohon = parseInt(document.getElementById('f-jumlah').value) || 0;
+    const afliator = document.getElementById('f-afliator').value.trim();
+
+    if (!nama) { alert('Mohon isi Nama Lengkap.'); return; }
+    if (!wa) { alert('Mohon isi Nomor WhatsApp.'); return; }
+    if (selectedPaket === 'Paket Satu' && jumlahPohon < 100) { alert('Paket Satu minimal 100 pohon.'); return; }
+    if (selectedPaket === 'Paket Dua' && jumlahPohon < 50) { alert('Paket Dua minimal 50 pohon.'); return; }
+
+    const harga = selectedPaket === 'Paket Satu' ? 50000 : 100000;
+    const totalModal = (jumlahPohon * harga).toLocaleString('id-ID');
+
+    // If no affiliator, 5% returns to pemodal
+    const bagiBase = selectedPaket === 'Paket Satu' ? 35 : 50;
+    const bagiTotal = afliator ? bagiBase : bagiBase + 5;
+    const bagiStr = afliator
+      ? `${bagiBase}% + Afliator: ${afliator}`
+      : `${bagiTotal}% (tanpa afliator, +5% kembali ke Anda)`;
+
+    const id = genID();
+    const now = new Date();
+    const tanggal = now.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
+    const paketEmoji = { 'Paket Satu': '🌱', 'Paket Dua': '⭐' };
+
+    document.getElementById('cert-nama').textContent = nama;
+    document.getElementById('cert-paket').textContent = `${paketEmoji[selectedPaket]} ${selectedPaket.toUpperCase()} — Bagi Hasil ${bagiTotal}%`;
+    document.getElementById('cert-tanggal').textContent = tanggal;
+    document.getElementById('cert-jumlah').textContent = `${jumlahPohon} pohon`;
+    document.getElementById('cert-modal').textContent = `Rp ${totalModal}`;
+    document.getElementById('cert-id').textContent = `SGF-${id}`;
+    document.getElementById('cert-kode').textContent = `SGF/JNL/2025/${id}${afliator ? ' · Afliator: ' + afliator : ' · Tanpa Afliator'}`;
+
+    document.getElementById('modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function printCert() {
+    const cert = document.getElementById('certificate').outerHTML;
+    const win = window.open('', '_blank');
+    win.document.write(`
+      <!DOCTYPE html><html><head>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+      <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background: white; display:flex; justify-content:center; padding:20px; }
+        :root {
+          --green-deep: #1a3d2b; --green-mid: #2d6a4f; --green-light: #52b788;
+          --gold: #c9a84c; --gold-light: #e9c46a; --cream: #fdf8f0;
+          --warm-white: #faf6ee; --bark: #6b4226; --text-dark: #1a1a18; --text-mid: #3d3d35;
+        }
+        #certificate {
+          background: linear-gradient(145deg, #fdf8f0 0%, #f5f0e4 100%);
+          border: 3px solid #c9a84c; border-radius: 10px;
+          padding: 50px 56px; position: relative;
+          font-family: 'DM Sans', sans-serif; overflow: hidden;
+          max-width: 720px; width: 100%;
+        }
+        #certificate::before { content:''; position:absolute; inset:8px; border:1px solid rgba(201,168,76,0.4); border-radius:6px; pointer-events:none; }
+        .cert-watermark { position:absolute; font-size:180px; color:rgba(45,106,79,0.04); font-family:'Playfair Display',serif; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-30deg); pointer-events:none; user-select:none; white-space:nowrap; }
+        .cert-corner { position:absolute; width:60px; height:60px; border-color:#c9a84c; border-style:solid; opacity:.5; }
+        .cert-corner.tl { top:14px; left:14px; border-width:2px 0 0 2px; }
+        .cert-corner.tr { top:14px; right:14px; border-width:2px 2px 0 0; }
+        .cert-corner.bl { bottom:14px; left:14px; border-width:0 0 2px 2px; }
+        .cert-corner.br { bottom:14px; right:14px; border-width:0 2px 2px 0; }
+        .cert-header { text-align:center; margin-bottom:30px; }
+        .cert-org { font-family:'Cinzel',serif; font-size:11px; letter-spacing:5px; color:#2d6a4f; text-transform:uppercase; margin-bottom:14px; }
+        .cert-logo-icon { font-size:48px; margin-bottom:10px; display:block; }
+        .cert-title { font-family:'Cinzel',serif; font-size:13px; letter-spacing:6px; color:#6b4226; text-transform:uppercase; margin-bottom:8px; }
+        .cert-main-title { font-family:'Playfair Display',serif; font-size:2.6rem; color:#1a3d2b; line-height:1.1; margin-bottom:8px; }
+        .cert-subtitle { font-size:12px; color:#3d3d35; letter-spacing:2px; text-transform:uppercase; }
+        .cert-divider { display:flex; align-items:center; gap:12px; margin:24px 0; }
+        .cert-divider-line { flex:1; height:1px; background:linear-gradient(90deg,transparent,#c9a84c,transparent); }
+        .cert-divider-icon { color:#c9a84c; font-size:18px; }
+        .cert-body { text-align:center; }
+        .cert-text { font-size:13px; color:#3d3d35; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; }
+        .cert-name { font-family:'Playfair Display',serif; font-size:2.2rem; color:#1a3d2b; font-style:italic; border-bottom:2px solid #c9a84c; display:inline-block; padding-bottom:6px; margin-bottom:20px; }
+        .cert-pkg-badge { display:inline-block; background:#1a3d2b; color:#e9c46a; font-family:'Cinzel',serif; font-size:12px; letter-spacing:3px; padding:8px 24px; border-radius:4px; margin-bottom:24px; }
+        .cert-desc { font-size:14px; color:#3d3d35; line-height:1.8; max-width:480px; margin:0 auto 24px; }
+        .cert-details-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:24px 0; }
+        .cert-detail-item { text-align:center; padding:14px; background:rgba(45,106,79,0.05); border:1px solid rgba(45,106,79,0.1); border-radius:8px; }
+        .cert-detail-label { font-size:10px; letter-spacing:2px; color:#2d6a4f; text-transform:uppercase; margin-bottom:4px; }
+        .cert-detail-value { font-weight:500; color:#1a3d2b; font-size:14px; }
+        .cert-footer { display:flex; justify-content:space-between; align-items:flex-end; margin-top:36px; padding-top:20px; border-top:1px solid rgba(201,168,76,0.3); }
+        .cert-sign { text-align:center; }
+        .cert-sign-name { font-family:'Playfair Display',serif; font-style:italic; font-size:18px; color:#1a3d2b; border-bottom:1px solid #6b4226; padding-bottom:4px; margin-bottom:4px; }
+        .cert-sign-title { font-size:10px; letter-spacing:2px; color:#3d3d35; text-transform:uppercase; }
+        .cert-seal { width:80px; height:80px; border:3px solid #c9a84c; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-direction:column; background:white; box-shadow:0 0 0 4px rgba(201,168,76,0.15); }
+        .cert-seal-icon { font-size:28px; }
+        .cert-seal-text { font-size:7px; letter-spacing:2px; color:#c9a84c; text-transform:uppercase; }
+        .cert-id { font-size:10px; color:rgba(61,61,53,0.4); letter-spacing:1px; margin-top:16px; text-align:center; }
+        @media print { body { padding:0; } }
+      </style>
+      </head><body>${cert}</body></html>
+    `);
+    win.document.close();
+    setTimeout(() => win.print(), 600);
+  }
+
+  function switchTab(name) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+    setTimeout(animateBars, 100);
+  }
+
+  // Animate ROI bars
+  function animateBars() {
+    document.querySelectorAll('.tab-content.active .roi-bar-fill').forEach(bar => {
+      const w = bar.getAttribute('data-w');
+      bar.style.width = w + '%';
+    });
+  }
+
+  // Run on load
+  window.addEventListener('load', () => setTimeout(animateBars, 400));
+
+  // Close modal on overlay click
+  document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+</script>
+</body>
+</html>
